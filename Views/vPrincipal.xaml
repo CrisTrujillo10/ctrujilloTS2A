@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ctrujilloTS2A.Views.vPrincipal"
+             Title="vPrincipal">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20">
+        
+        <Label 
+            Text="Tarea Semana 2"
+            FontSize="20"
+            TextColor="Red"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image
+            Source="uisrael.png"
+            WidthRequest="300"/>
+
+        <Picker x:Name="pkEstudiantes" Title="Estudiantes">
+            <Picker.Items>
+                <x:String>Cristopher Trujillo</x:String>
+                <x:String>Kevin Vinueza</x:String>
+                <x:String>Dennis Valencia</x:String>
+                <x:String>Nicolas Cruz</x:String>
+                <x:String>Antonio Valencia</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry 
+            x:Name="txtSeguimiento_1" 
+            Placeholder="Nota Seguimiento 1"
+            MaxLength="3"/>
+
+        <Entry
+            x:Name="txtExamen_1" 
+            Placeholder="Examen 1"
+            MaxLength="3"/>
+
+        <Entry 
+            x:Name="txtSeguimiento_2" 
+            Placeholder="Nota Seguimiento 2"
+            MaxLength="3"/>
+
+        <Entry
+            x:Name="txtExamen_2" 
+            Placeholder="Examen 2"
+            MaxLength="3"/>
+
+        <DatePicker x:Name="dpkFecha" Format="yyyy-MM-dd"/>
+
+        <Button 
+            x:Name="btnNotaFinal"
+            Text="Calcular Nota Final"
+            Clicked="btnNotaFinal_Clicked"  />
+     
+        <Label
+            x:Name="lblResultado"
+            TextColor="Tomato"/>
+
+    </VerticalStackLayout>
+</ContentPage>
